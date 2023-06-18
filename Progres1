@@ -1,0 +1,99 @@
+ANALISIS PERFORMA ALGORITMA MULTICLASS SVM PADA IDENTIFIKASI 
+JENIS BUNGA DENGAN EKSTRAKSI CIRI ORDE SATU BERDASARKAN 
+SKALA RESOLUSI CITRA
+
+Siti Nurkhodijah, Sri Putri Nurjanah, Ajeng Hilmi Nurul Ilmi, Akmaludin
+Program Studi Sistem Informasi
+Universitas Adhirajasa Reswara Sanjaya 
+ Jl.Sekolah Internasional No.1-2 Antapani, Bandung
+
+
+ABSTRACT
+
+Identifikasi jenis bunga melalui pengolahan citra telah menjadi topik penelitian yang menarik dalam pengolahan citra digital. Pengenalan pola merupakan salah satu aplikasi penting dalam bidang pengolahan citra. Salah satu pendekatan dalam pengenalan pola adalah pengklasifikasian dengan menggunakan algoritma Support Vector Machine multiclass (SVM) yang efektif dalam mengklasifikasikan objek berdasarkan fitur yang diekstraksi dari citra. Namun, performa dari algoritma SVM multiclass sangat dipengaruhi oleh ekstraksi ciri yang digunakan. Oleh karena itu, penelitian ini bertujuan untuk menganalisis performa dari algoritma SVM multiclass pada identifikasi jenis bunga dengan menggunakan ekstraksi ciri orde satu berdasarkan skala resolusi citra. Fitur orde satu yang diekstraksi meliputi mean, standar deviasi, skewness, dan kurtosis. Kemudian, skala resolusi citra yang berbeda diterapkan untuk memperoleh gambar dengan tingkat detal yang berbeda. Dalam penelitian ini citra yang digunakan terdiri dari lima jenis bunga yaitu calendula, iris, leucanthemum maximum, peony, dan rose. dengan 500 citra pelatihan dan 150 citra pengujian. Berdasarkan hasil penelitian menunjukan bahwa penggunaan skala resolusi citra yang berbeda mempengaruhi performa klasifikasi SVM. Performa tertinggi diperoleh pada skala resolusi citra yang lebih tinggi dengan accurasi 95.06%
+Kata kunci: Identifikasi, SVM multiclass, skala resolusi citra.
+
+1.	PENDAHULUAN
+1.1.	Latar Belakang
+	Pengenalan jenis bunga merupakan salah satu aplikasi penting dalam bidang ilmu komputer dan pengolahan citra. Salah satu metode yang digunakan untuk mengidentifikasi jenis bunga adalah dengan menggunakan algoritma Support Vector Machine (SVM) multiclass. Namun, dalam implementasinya, SVM memerlukan ekstraksi ciri dari citra bunga sebagai masukan, sehingga kinerja SVM sangat tergantung pada kualitas fitur yang diekstrak. 
+Salah satu teknik ekstraksi fitur yang sering digunakan adalah ekstraksi fitur orde satu berdasarkan skala resolusi citra. Dalam teknik ini, citra bunga diperkecil dengan beberapa faktor skala yaitu pada resolusi 50% dan 100% , dan fitur orde satu seperti mean, variance, dan skewness dihitung dari setiap sub-citra yang dihasilkan. Fitur-fitur ini kemudian digunakan sebagai masukan untuk SVM multiclass. Untuk mengevaluasi kinerja algoritma multiclass SVM dengan ekstraksi fitur orde satu berdasarkan skala resolusi citra dalam identifikasi jenis bunga, dilakukanlah analisis performa algoritma. Analisis ini bertujuan untuk mengukur akurasi klasifikasi yang dihasilkan oleh algoritma, serta mengidentifikasi faktor-faktor yang mempengaruhi kinerja algoritma tersebut. Analisis performa algoritma Multiclass SVM pada identifikasi jenis bunga dengan ekstraksi ciri orde satu berdasarkan skala resolusi citra merupakan suatu studi yang berfokus pada pengembangan sistem pengenalan jenis bunga berdasarkan gambar bunga yang diambil dengan resolusi yang berbeda-beda. Identifikasi jenis bunga yang akurat dan efektif sangat penting dalam berbagai aplikasi, seperti pertanian, botani, dan kehutanan. Penggunaan teknologi pengolahan citra dan pembelajaran mesin telah memungkinkan pengembangan sistem pengenalan jenis bunga yang efektif. Salah satu teknik pembelajaran mesin yang sering digunakan adalah algoritma SVM (Support Vector Machine). SVM merupakan algoritma yang populer dalam klasifikasi dan pengenalan pola, karena memiliki keunggulan dalam menangani data yang kompleks dan tidak linier. Dalam analisis performa algoritma Multiclass SVM pada identifikasi jenis bunga dengan ekstraksi ciri orde satu berdasarkan skala resolusi citra, penggunaan ekstraksi ciri orde satu dilakukan untuk mengurangi dimensi data citra dan mempertahankan informasi penting dalam citra. Selain itu, skala resolusi citra juga diperhatikan karena dapat mempengaruhi kualitas identifikasi jenis bunga.
+Dengan demikian, analisis performa algoritma multiclass SVM pada identifikasi jenis bunga dengan ekstraksi ciri orde satu berdasarkan skala resolusi citra penting untuk mengembangkan metode yang lebih baik dalam pengenalan jenis bunga menggunakan algoritma SVM (Support Vector Machine) serta memberikan kontribusi pada pengembangan sistem pengenalan citra yang lebih baik dan efisien.
+
+1.2.	Rumusan Masalah
+	1.Sejauh mana performa algoritma Multiclass SVM dalam mengidentifikasi jenis bunga 	berdasarkan ekstraksi ciri orde satu pada citra?
+	2.Bagaimana pengaruh perubahan skala resolusi citra terhadap performa algoritma Multiclass SVM 	dalam identifikasi jenis bunga?
+	3.Apakah penggunaan fitur ciri orde satu seperti mean, skewness, variance, kurtosis, dan entropy 	dapat meningkatkan akurasi identifikasi jenis bunga menggunakan algoritma Multiclass SVM?
+
+
+1.3.	Batasan Masalah
+	1.Penelitian ini akan menggunakan bahasa pemrograman MATLAB dalam implementasinya.
+	2.Penelitian ini tidak mempertimbangkan faktor lain seperti rotasi, skewing, atau transformasi citra 	lainnya yang dapat mempengaruhi performa algoritma.
+	3.Waktu komputasi atau efisiensi algoritma tidak menjadi fokus utama dalam penelitian ini.
+
+
+1.4.	Tujuan Penelitian
+	Penelitian ini bertujuan untuk menganalisis performa algoritma Multiclass SVM dalam mengidentifikasi jenis bunga menggunakan ekstraksi ciri orde satu berdasarkan skala resolusi citra.
+Fitur-fitur yang diekstraksi termasuk mean, skewness, variance, kurtosis, dan entropy. Dengan menggunakan dataset yang telah disebutkan, penelitian ini diharapkan dapat memberikan informasi tentang efektivitas dan akurasi algoritma Multiclass SVM dalam mengklasifikasikan jenis bunga.
+Citra bunga digunakan sebagai input, dan ekstraksi ciri orde satu dilakukan untuk menggambarkan fitur-fitur penting dari citra tersebut. Skala resolusi citra juga diperhatikan dalam proses ini, dimana citra diubah menjadi beberapa resolusi yang berbeda untuk menganalisis pengaruhnya terhadap performa algoritma.
+
+1.5.	Manfaat Penelitian
+	Penelitian ini memberikan manfaat dalam meningkatkan akurasi identifikasi jenis bunga, meningkatkan efisiensi dan kepastian identifikasi, serta dapat diterapkan dalam berbagai bidang terkait. Selain itu, penelitian ini juga memberikan kontribusi pada pengembangan sistem pengenalan citra secara lebih luas.
+-	Meningkatkan akurasi identifikasi jenis bunga.
+-	Efisiensi dan kepastian identifikasi yang lebih tinggi.
+-	Aplikasi dalam botani, keanekaragaman hayati, pertanian, dan tamanan.
+-	Kontribusi pada pengembangan sistem pengenalan citra.
+
+1.6.	Landasan Teori
+1.6.1.	 Citra – 
+Penjelasan citra
+1.6.2.	Ekstraksi Ciri 
+Penjelasan ekstraksi ciri, Dari nilai-nilai pada histogram yang dihasilkan, dapat dihitung beberapa parameter ciri, antara lain adalah mean, variance, skewness, kurtosis, dan entropy 
+1.6.3.	Pengolahan Citra
+Penjelasan pengolahan citra dan teknik pengolahan pada tingkat citra yg digunakan di jurnal ini
+1.6.4.	SVM
+Penjelasan metode svm dgn pengolahan citra
+1.6.5.	Bunga
+Penjelasan dan jenis bunga yg di pakai apa saja
+
+
+ 
+2.	METODE PENELITIAN
+2.1.	Penerapan Metode
+2.2.	Alat Penelitian 
+	Perangkat Lunak Matlab: Digunakan sebagai platform untuk implementasi penelitian,  	termasuk pengolahan citra, ekstraksi ciri, dan penggunaan algoritma Multiclass SVM.
+2.3.	Bahan Penelitian: 
+Dataset Citra Bunga: Memiliki kumpulan citra bunga yang mencakup lima jenis bunga, yaitu Calendula, Iris, Leucanthemum Maximum, Peony, dan Rose. Dataset ini digunakan sebagai data latih dan data uji dalam penelitian
+2.4.	Pre-Prosesing
+Fungsi-fungsi Pemrosesan Citra: Menggunakan fungsi-fungsi pemrosesan citra dalam Matlab, seperti imread untuk membaca citra, imresize untuk mengubah ukuran citra, dan fungsi-fungsi lainnya untuk pra-proses dan manipulasi citra.
+2.5.	Ekstraksi Ciri orde satu
+Fungsi Graycomatrix dan Graycoprops: Fungsi-fungsi ini digunakan dalam Matlab untuk ekstraksi ciri orde satu, seperti mean, skewness, variance, kurtosis, dan entropy. Graycomatrix digunakan untuk menghitung matriks kemunculan level keabuan pada citra, sedangkan Graycoprops digunakan untuk menghitung properti ciri orde satu dari matriks kemunculan tersebut.
+
+2.6.	Identifikasi Menggunakan Multisvm
+
+3.	HASIL DAN PEMBAHASAN 
+3.1.	Pembahasan
+3.1.1.	Poses pelatihan dan pengujian
+3.2.	Hasil
+3.2.1.	Hasil Pengujian Sistem Ektraksi Ciri Orde1
+Grafik Ciri Mean Data Pengujian
+Tabel 1. Hasil Identifikasi
+Tabel 2. Kalkulasi Hasil Identifikasi Tiap Jenis Bunga
+Tabel 3. Hasil Akurasi Tiap Jenis Bunga
+4.	KESIMPULAN 
+	Kesimpulan dari penelitian tsb
+5.	DAFTAR PUSTAKA
+Kara, M. S., Wara, F. A., & Rumba, M. F. (2021). Identifikasi Jenis Bunga Menggunakan Ekstraksi Ciri Orde Satu (Studi kasus di Seminari Tinggi Rita Piret). Increate-Inovasi Dan Kreasi Dalam Teknologi Informasi, 6(1).
+
+Pahlefi, T. R., Buaton, R., & Nurhayati, N. (2021). IDENTIFIKASI JENIS BUNGA MENGGUNAKAN EKSTRAKSI CIRI ORDE SATU DAN ALGORITMA MULTI SUPPORT-VECTOR MACHINES (MULTISVM). Jurnal Informatika Kaputama (JIK), 5(1), 116-128.
+
+AKSAH, S. P. (2022). TUGAS AKHIR KOMPREHENSIF (Doctoral dissertation, Universitas Mercu Buana Jakarta).
+ 
+OJS :
+•	https://ejournal.gunadarma.ac.id/index.php/infokom
+•	https://just-si.ub.ac.id/index.php/just-si
+•	https://jurnal.mdp.ac.id/index.php/jatisi/
+•	https://journal.amikveteran.ac.id/index.php/jitek
+
+
+
+
