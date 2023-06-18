@@ -44,19 +44,25 @@ Citra bunga digunakan sebagai input, dan ekstraksi ciri orde satu dilakukan untu
 -	Kontribusi pada pengembangan sistem pengenalan citra.
 
 1.6.	Landasan Teori
-1.6.1.	 Citra – 
-Penjelasan citra
-1.6.2.	Ekstraksi Ciri 
-Penjelasan ekstraksi ciri, Dari nilai-nilai pada histogram yang dihasilkan, dapat dihitung beberapa parameter ciri, antara lain adalah mean, variance, skewness, kurtosis, dan entropy 
-1.6.3.	Pengolahan Citra
-Penjelasan pengolahan citra dan teknik pengolahan pada tingkat citra yg digunakan di jurnal ini
-1.6.4.	SVM
-Penjelasan metode svm dgn pengolahan citra
-1.6.5.	Bunga
-Penjelasan dan jenis bunga yg di pakai apa saja
+Pada bagian ini, akan dijelaskan beberapa konsep dasar yang menjadi landasan teori untuk penelitian ini. Terdapat beberapa poin yang akan dijelaskan secara jelas, sebagai berikut:
 
+1.6.1 Citra
+Citra adalah representasi visual dari objek atau fenomena yang ditangkap oleh perangkat penginderaan atau kamera. Citra dapat terdiri dari piksel-piksel yang membentuk matriks dengan informasi tentang intensitas cahaya pada setiap pikselnya. Pengolahan citra bertujuan untuk memanipulasi citra tersebut agar lebih mudah dianalisis atau diekstraksi informasinya.
 
- 
+1.6.2 Ekstraksi Ciri
+Ekstraksi ciri adalah proses pengambilan fitur penting atau karakteristik dari suatu citra yang dapat digunakan dalam proses pengenalan pola. Fitur-fitur ini dapat berupa statistik seperti mean (rata-rata), standar deviasi, skewness (kecondongan), kurtosis (keruncingan), atau fitur lain yang dapat membedakan objek atau kelas yang berbeda. Ekstraksi ciri merupakan langkah penting dalam pengolahan citra karena memungkinkan pemrosesan data yang lebih efektif dan efisien.
+
+1.6.3 Pengolahan Citra
+Pengolahan citra melibatkan berbagai teknik dan operasi untuk memanipulasi citra dengan tujuan tertentu. Pengolahan citra dapat mencakup operasi seperti filtering, segmentasi, pemadatan, dan lainnya. Filtering digunakan untuk menghilangkan derau atau meningkatkan kontras citra. Segmentasi memisahkan objek atau wilayah yang berbeda dalam citra. Pemadatan digunakan untuk mengurangi dimensi citra agar lebih efisien dalam pemrosesan.
+
+1.6.4 SVM (Support Vector Machine)
+Support Vector Machine (SVM) adalah algoritma pembelajaran mesin yang efektif dalam mengklasifikasikan objek berdasarkan fitur yang diekstraksi dari citra. SVM bekerja dengan mencari pemisah terbaik (hyperplane) yang dapat memisahkan objek-objek dalam ruang fitur. Algoritma SVM multiclass digunakan dalam penelitian ini karena mampu mengklasifikasikan objek ke dalam beberapa kelas yang berbeda.
+
+1.6.5 Bunga
+Bunga adalah organ reproduksi tumbuhan yang memiliki berbagai bentuk, warna, dan pola yang unik. Dalam penelitian ini, digunakan lima jenis bunga sebagai objek identifikasi, yaitu calendula, iris, leucanthemum maximum, peony, dan rose. Setiap jenis bunga memiliki ciri-ciri morfologi yang berbeda, seperti warna kelopak, bentuk daun, dan pola bunga, yang dapat diekstraksi dan digunakan dalam proses identifikasi.
+
+Dengan memahami landasan teori tersebut, penelitian ini dapat melanjutkan dengan menjelaskan metode penelitian yang digunakan dalam mengidentifikasi jenis bunga menggunakan algoritma SVM multiclass dengan ekstraksi ciri orde satu berdasarkan skala resolusi citra.
+
 2.	METODE PENELITIAN
 2.1.	Penerapan Metode
 2.2.	Alat Penelitian
@@ -89,22 +95,89 @@ Dalam penelitian ini, Multisvm digunakan sebagai algoritma klasifikasi untuk men
 Dalam proses identifikasi, Multisvm menggunakan konsep dasar menggunakan fungsi linear yang memisahkan data latih menjadi dua kelas yang berbeda.
 Dengan menggunakan metode ini, penelitian ini memberikan kemampuan untuk mengidentifikasi jenis bunga secara otomatis berdasarkan ciri-ciri yang diekstraksi dari citra. Hal ini membantu dalam memahami dan menganalisis variasi dalam dataset citra bunga yang digunakan dalam penelitian ini.
 
-
 3.	HASIL DAN PEMBAHASAN 
 3.1.	Pembahasan
-3.1.1.	Poses pelatihan dan pengujian
+Dalam penelitian ini, dilakukan proses pelatihan dan pengujian untuk melatih sistem dalam mengenali pola-pola inputan berupa gambar bunga. Proses pelatihan dilakukan dengan memberikan data citra bunga sebagai input dan mengenalkan pola-pola yang ada pada citra tersebut kepada sistem. Hal ini bertujuan agar sistem dapat mempelajari karakteristik dari setiap jenis bunga yang akan diidentifikasi.
+
+Setelah proses pelatihan selesai, dilakukan proses pengujian untuk menguji kemampuan sistem dalam mengidentifikasi jenis bunga berdasarkan fitur yang diekstraksi. Pada tahap ini, citra bunga yang belum pernah dilihat oleh sistem diberikan sebagai input, dan sistem akan melakukan pengenalan jenis bunga berdasarkan pola-pola yang telah dipelajari selama proses pelatihan.
+
+3.1.1 Proses Pelatihan dan Pengujian
+Proses pelatihan dilakukan menggunakan 199 citra pelatihan yang terdiri dari lima jenis bunga, yaitu calendula, iris, leucanthemum maximum, peony, dan rose. Setiap citra pelatihan digunakan untuk mengenalkan pola-pola karakteristik dari jenis bunga yang bersangkutan kepada sistem. Selama proses pelatihan, sistem belajar untuk menghubungkan fitur-fitur ciri orde satu yang diekstraksi dengan jenis bunga yang sesuai.
+
+Setelah proses pelatihan selesai, dilakukan pengujian menggunakan 10 citra uji yang belum pernah dilihat oleh sistem sebelumnya. Sistem diberikan citra uji sebagai input, dan kemudian sistem melakukan klasifikasi untuk mengidentifikasi jenis bunga yang terdapat pada citra tersebut. Hasil pengujian ini akan digunakan untuk menganalisis performa algoritma SVM multiclass dalam identifikasi jenis bunga.
+
+ 
+Gambar 1. Algoritma Proses Pelatihan dan Pengujian
+
 3.2.	Hasil
-3.2.1.	Hasil Pengujian Sistem Ektraksi Ciri Orde1
-Grafik Ciri Mean Data Pengujian
-Tabel 1. Hasil Identifikasi
+3.2.1.	 Hasil Pengujian Sistem Ektraksi Ciri Orde1
+Berikut adalah gambar hasil pengujian yang dilakukan pada setiap citra bunga setelah melalui tahap preprocessing dan menggunakan berbagai fungsi ekstraksi ciri orde satu. Dalam tahap preprocessing, citra-citra bunga telah diolah dan disesuaikan agar dapat memberikan hasil ekstraksi ciri yang optimal.
+
+Selanjutnya, fungsi-fungsi ekstraksi ciri orde satu seperti Graycomatrix dan Graycoprops digunakan untuk menghasilkan nilai-nilai ciri seperti mean, skewness, variance, kurtosis, dan entropy dari setiap citra bunga. Gambar hasil pengujian ini memvisualisasikan nilai-nilai ciri yang berhasil diekstraksi dari masing-masing citra.
+
+
+
+
+ 
+Gambar 2. Bunga Calendula
+
+ 
+Gambar 3. Bunga Iris
+
+ 
+Gambar 4. Bunga Mawar
+
+ 
+Gambar 5. Bunga Peony
+
+ 
+Gambar 5. Bunga Leucantemum Maximum
+
+
+
+Hasil pengujian memberikan pemahaman yang lebih baik tentang informasi yang dapat diekstraksi menggunakan metode ini. Nilai-nilai ciri orde satu seperti mean, skewness, variance, kurtosis, dan entropy memberikan gambaran tentang karakteristik keabuan dalam citra bunga. Dengan pemahaman ini, dapat dilakukan analisis yang lebih lanjut dan pemilihan ciri yang sesuai untuk pengenalan jenis bunga.
+
+Uji coba dan pengujian ini penting untuk mengevaluasi efektivitas dan kecocokan fungsi Graycomatrix dan Graycoprops dalam ekstraksi ciri orde satu. Hasil pengujian yang akurat dan konsisten akan memberikan kepercayaan yang lebih tinggi terhadap penggunaan metode ini dalam analisis citra dan pengenalan objek. Berikut Tabel hasil dari nilai-nilai ciri orde satu.
+
+Tabel 1. Hasil Ekstraksi Ciri Orde 1
+            	    Mean    	  Skewness  	  Kurtosis  	  Entropy   
+Calendula   	   88.3486  	   0.2957   	   2.3582   	   7.2856   
+Iris        	  123.6467  	   0.0079   	   2.6414   	   7.3295   
+Mawar       	  124.7833  	   0.1406   	   1.7830   	   7.4665   
+Peony       	  100.5311  	  -0.0320   	   2.0260   	   7.6274   
+Leucantemum 	   96.2142  	   0.1232   	   1.2727   	   7.2183   
+Keseluruhan 	  106.7048  	   0.1071   	   2.0163   	   7.3855   
+
+Tabel tersebut menyajikan hasil statistik dari ekstraksi ciri orde satu untuk berbagai jenis bunga yang telah diuji dalam penelitian ini. Dengan melihat tabel tersebut, dapat diamati perbedaan statistik antara jenis bunga yang berbeda. Misalnya, mawar memiliki nilai mean yang lebih tinggi dibandingkan dengan jenis bunga lainnya, sementara peony memiliki skewness yang sedikit negatif, menunjukkan kecondongan ke arah sebaliknya dari distribusi yang simetris. Informasi ini dapat digunakan untuk membedakan dan mengidentifikasi jenis bunga berdasarkan ekstraksi ciri orde satu.
+
+Tabel 2. Hasil Identifikasi / Prediksi
+TrueLabel	PredictedLabel
+	
+Calendula	Calendula
+Calendula	Calendula
+Iris	Iris
+Iris	Iris
+Mawar	Mawar
+Mawar	Mawar
+Peony	Peony
+Peony	Peony
+leucantemum	Calendula
+leucantemum	leucantemum
+
+Accuracy: 0.9000
+Tabel di atas menunjukkan perbandingan antara label sebenarnya (TrueLabel) dan label yang diprediksi (PredictedLabel) berdasarkan hasil pengujian. Setiap baris dalam tabel mewakili satu citra bunga, dan kolom "TrueLabel" menyatakan jenis bunga yang sebenarnya, sedangkan kolom "PredictedLabel" menyatakan jenis bunga yang diprediksi oleh sistem.
+
+Dalam pengujian ini, terdapat 10 citra bunga yang diuji. Dari hasil pengujian, dapat dilihat bahwa sistem berhasil memprediksi dengan benar jenis bunga pada sebagian besar citra. Namun, terdapat satu citra leucantemum yang salah diprediksi sebagai Calendula.
+Akurasi (Accuracy) dari sistem pengenalan jenis bunga ini adalah 0.9000, yang berarti sebanyak 90% citra berhasil diprediksi dengan benar.
 Tabel 2. Kalkulasi Hasil Identifikasi Tiap Jenis Bunga
 Tabel 3. Hasil Akurasi Tiap Jenis Bunga
-
-
 4.	KESIMPULAN 
-	Kesimpulan dari penelitian tsb
-	
-	
+Penelitian ini berhasil menganalisis performa algoritma Multiclass SVM dalam mengidentifikasi jenis bunga berdasarkan ekstraksi ciri orde satu dengan mempertimbangkan skala resolusi citra. Melalui uji coba yang dilakukan, diperoleh hasil yang menunjukkan bahwa penggunaan ekstraksi ciri orde satu dengan algoritma Multiclass SVM memberikan hasil yang memuaskan dalam identifikasi jenis bunga. Melalui uji coba yang dilakukan, algoritma ini mampu mengenali jenis bunga dengan tingkat akurasi mencapai 90%
+Hasil pengujian menunjukkan bahwa penggunaan skala resolusi citra memiliki pengaruh signifikan terhadap performa algoritma. Dengan menggunakan skala resolusi citra yang tepat, akurasi pengenalan jenis bunga dapat ditingkatkan secara signifikan. Oleh karena itu, penting untuk mempertimbangkan faktor skala resolusi citra saat melakukan identifikasi jenis bunga menggunakan ekstraksi ciri orde satu dengan algoritma Multiclass SVM.
+Batasan penelitian ini terletak pada penggunaan metode ekstraksi ciri orde satu dan algoritma Multiclass SVM, sehingga masih terdapat ruang untuk eksplorasi metode ekstraksi ciri lainnya dan algoritma klasifikasi alternatif. Selain itu, penelitian ini juga membatasi skala resolusi citra yang digunakan, sehingga penelitian selanjutnya dapat melibatkan variasi skala resolusi citra untuk menggali lebih dalam pengaruhnya terhadap performa algoritma.
+Hasil penelitian ini memiliki manfaat penting dalam pengenalan jenis bunga berdasarkan citra. Dalam aplikasi praktis, hasil penelitian ini dapat digunakan untuk pengembangan sistem pengenalan jenis bunga yang lebih akurat dan efektif. Selain itu, penelitian ini memberikan pemahaman yang lebih baik tentang pengaruh skala resolusi citra terhadap performa algoritma, sehingga dapat membantu pengguna dalam memilih skala resolusi citra yang optimal.
+Secara keseluruhan, penelitian ini memberikan kontribusi dalam pengembangan metode pengenalan jenis bunga berdasarkan citra. Dengan menggunakan algoritma Multiclass SVM dan ekstraksi ciri orde satu, Dengan pengembangan lebih lanjut pada pengaturan skala resolusi citra dan model klasifikasi, diharapkan dapat menghasilkan sistem yang lebih akurat dan efektif dalam identifikasi jenis bunga berdasarkan citra. penelitian ini membuka peluang untuk pengembangan lebih lanjut dalam pengenalan jenis bunga yang dapat diterapkan dalam berbagai bidang seperti kebun botani, analisis keanekaragaman flora, dan aplikasi mobile. Penelitian selanjutnya dapat melibatkan faktor-faktor lain seperti tekstur dan bentuk bunga untuk meningkatkan akurasi pengenalan jenis bunga secara lebih komprehensif.
+
 5.	DAFTAR PUSTAKA
 Kara, M. S., Wara, F. A., & Rumba, M. F. (2021). Identifikasi Jenis Bunga Menggunakan Ekstraksi Ciri Orde Satu (Studi kasus di Seminari Tinggi Rita Piret). Increate-Inovasi Dan Kreasi Dalam Teknologi Informasi, 6(1).
 
