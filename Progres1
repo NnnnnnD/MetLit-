@@ -59,16 +59,36 @@ Penjelasan dan jenis bunga yg di pakai apa saja
  
 2.	METODE PENELITIAN
 2.1.	Penerapan Metode
-2.2.	Alat Penelitian 
-	Perangkat Lunak Matlab: Digunakan sebagai platform untuk implementasi penelitian,  	termasuk pengolahan citra, ekstraksi ciri, dan penggunaan algoritma Multiclass SVM.
-2.3.	Bahan Penelitian: 
-Dataset Citra Bunga: Memiliki kumpulan citra bunga yang mencakup lima jenis bunga, yaitu Calendula, Iris, Leucanthemum Maximum, Peony, dan Rose. Dataset ini digunakan sebagai data latih dan data uji dalam penelitian
-2.4.	Pre-Prosesing
-Fungsi-fungsi Pemrosesan Citra: Menggunakan fungsi-fungsi pemrosesan citra dalam Matlab, seperti imread untuk membaca citra, imresize untuk mengubah ukuran citra, dan fungsi-fungsi lainnya untuk pra-proses dan manipulasi citra.
-2.5.	Ekstraksi Ciri orde satu
-Fungsi Graycomatrix dan Graycoprops: Fungsi-fungsi ini digunakan dalam Matlab untuk ekstraksi ciri orde satu, seperti mean, skewness, variance, kurtosis, dan entropy. Graycomatrix digunakan untuk menghitung matriks kemunculan level keabuan pada citra, sedangkan Graycoprops digunakan untuk menghitung properti ciri orde satu dari matriks kemunculan tersebut.
+2.2.	Alat Penelitian
+Dalam penelitian ini, perangkat lunak matlab digunakan sebagai platform implementasi untuk berbagai tahapan penelitian, termasuk pengolahan citra, ekstraksi ciri, dan penggunaan algoritma Multiclass SVM. Dengan menggunakan Matlab, kami dapat menggunakan beragam fungsi dan fitur yang mendukung analisis citra dan pemrosesan data yang diperlukan dalam penelitian ini.
 
+2.3.	Bahan Penelitian 
+Dalam penelitian ini, dataset citra bunga digunakan sebagai bahan untuk penelitian. Dataset citra bunga terdiri dari lima jenis bunga yang berbeda, yaitu Calendula, Iris, Leucanthemum Maximum, Peony, dan Rose. Dataset ini berfungsi sebagai data latih dan data uji dalam penelitian. Data latih digunakan untuk menentukan pola setiap jenis citra bunga, sedangkan data uji digunakan untuk menguji kinerja metode yang dikembangkan dalam mengidentifikasi jenis bunga.
+
+2.4.	Pre-Processing
+Dalam penelitian ini, tahap pre-prosesing merupakan tahap awal yang penting dalam pengolahan citra. Kami melakukan analisis dan implementasi berbagai fungsi pemrosesan citra menggunakan perangkat lunak Matlab, seperti imread untuk membaca citra, imresize untuk mengubah ukuran citra, dan fungsi-fungsi lainnya pada perangkat lunak matlab. Tujuannya adalah untuk mempersiapkan citra supaya memenuhi persyaratan analisis yang diinginkan dengan melakukan pra-proses dan manipulasi citra.
+
+2.5.	Ekstraksi Ciri orde satu
+Dalam penelitian ini, dilakukan ekstraksi ciri orde satu menggunakan fungsi Graycomatrix dan Graycoprops dalam Matlab. Fungsi Graycomatrix digunakan untuk menghitung matriks kemunculan level keabuan pada citra, sementara fungsi Graycoprops digunakan untuk menghitung properti ciri orde satu dari matriks tersebut. Dengan menggunakan fungsi-fungsi ini, dapat menggambarkan dan menganalisis distribusi keabuan pada citra dalam proses pengolahan dan klasifikasi citra. Ciri-ciri orde satu yang diekstraksi meliputi mean, skewness, variance, kurtosis, dan entropy.
+a. Mean
+Mengukur dispersi gambar dalam citra.
+
+b. Skewness
+Melihat tingkat relatif kematangan kurva histogram gambar dalam citra. 
+
+c. Variance
+Menggambarkan variasi elemen histogram dalam suatu citra.
+
+d. Kurtosis
+Menggambarkan keruncingan relatif kurva histogram suatu citra.
+
+e. Entropy
+Mengukur tingkat ketidakaturan bentuk dalam suatu citra.
 2.6.	Identifikasi Menggunakan Multisvm
+Dalam penelitian ini, Multisvm digunakan sebagai algoritma klasifikasi untuk mengidentifikasi jenis bunga berdasarkan fitur-fitur ciri yang diekstraksi dari citra. Metode Multisvm digunakan untuk mengklasifikasikan citra-citra bunga ke dalam lima kategori yang berbeda, yaitu Calendula, Iris, Leucanthemum Maximum, Peony, dan Rose. Kemudian, Multisvm digunakan untuk mengenali dan mengklasifikasikan citra-citra baru ke dalam jenis bunga yang tepat berdasarkan fitur-fitur tersebut.
+Dalam proses identifikasi, Multisvm menggunakan konsep dasar menggunakan fungsi linear yang memisahkan data latih menjadi dua kelas yang berbeda.
+Dengan menggunakan metode ini, penelitian ini memberikan kemampuan untuk mengidentifikasi jenis bunga secara otomatis berdasarkan ciri-ciri yang diekstraksi dari citra. Hal ini membantu dalam memahami dan menganalisis variasi dalam dataset citra bunga yang digunakan dalam penelitian ini.
+
 
 3.	HASIL DAN PEMBAHASAN 
 3.1.	Pembahasan
@@ -79,8 +99,12 @@ Grafik Ciri Mean Data Pengujian
 Tabel 1. Hasil Identifikasi
 Tabel 2. Kalkulasi Hasil Identifikasi Tiap Jenis Bunga
 Tabel 3. Hasil Akurasi Tiap Jenis Bunga
+
+
 4.	KESIMPULAN 
 	Kesimpulan dari penelitian tsb
+	
+	
 5.	DAFTAR PUSTAKA
 Kara, M. S., Wara, F. A., & Rumba, M. F. (2021). Identifikasi Jenis Bunga Menggunakan Ekstraksi Ciri Orde Satu (Studi kasus di Seminari Tinggi Rita Piret). Increate-Inovasi Dan Kreasi Dalam Teknologi Informasi, 6(1).
 
