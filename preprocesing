@@ -1,0 +1,41 @@
+3. Pra-proses data citra dengan mengubah ukuran citra ke skala resolusi yang berbeda yaitu 50% dan 100% menggunakan fungsi imresize di Matlab.
+Pra-proses data dalam penelitian ini dilakukan dengan menggunakan software Matlab. Berikut adalah langkah-langkah pra-proses data citra dengan mengubah ukuran citra ke skala resolusi yang berbeda, yaitu 50% dan 100%:
+
+	1. Load citra
+Pertama-tama, citra yang telah dikumpulkan di-load menggunakan fungsi imread di Matlab.
+	2. Ubah ukuran citra
+Setelah citra di-load, selanjutnya adalah mengubah ukuran citra menjadi 50% dan 100%. Untuk mengubah ukuran citra, digunakan fungsi imresize di Matlab. Berikut adalah contoh kode yang digunakan untuk mengubah ukuran citra menjadi 50%:
+
+```
+% Load citra
+img = imread('nama_file_citra.jpg');
+
+% Ubah ukuran citra menjadi 50%
+img_50 = imresize(img, 0.5);
+```
+
+Untuk mengubah ukuran citra menjadi 100%, digunakan kode berikut:
+
+```
+% Load citra
+img = imread('nama_file_citra.jpg');
+
+% Ubah ukuran citra menjadi 100%
+img_100 = imresize(img, 1.0);
+```
+
+	3. Simpan citra
+Setelah citra diubah ukurannya, selanjutnya adalah menyimpan citra ke dalam folder yang telah ditentukan. Untuk menyimpan citra, digunakan fungsi imwrite di Matlab. Berikut adalah contoh kode yang digunakan untuk menyimpan citra:
+
+```
+% Simpan citra 50%
+imwrite(img_50, 'nama_file_citra_50.jpg');
+
+% Simpan citra 100%
+imwrite(img_100, 'nama_file_citra_100.jpg');
+```
+
+Dengan melakukan pra-proses data seperti di atas, ukuran data citra dapat diperkecil sehingga mempercepat proses ekstraksi fitur. Selain itu, dengan mengubah ukuran citra ke skala resolusi yang berbeda, dapat pula memperbaiki kualitas citra dan meningkatkan akurasi pengolahan data citra.
+
+
+
